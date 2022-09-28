@@ -3,16 +3,22 @@ using System.Globalization;
 
 
 //Leitrura de arquivo txt 
-
-string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
-
-
-foreach (string linha in linhas)
+try
 {
-  Console.WriteLine(linha);
+  string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
+
+
+  foreach (string linha in linhas)
+  {
+    Console.WriteLine(linha);
+  }
+
 }
-
-
+catch (Exception ex)
+{
+  Console.Clear();
+  Console.WriteLine($"Ocorreu uma exceção genérica. \n\n{ex.Message}");
+}
 
 
 
