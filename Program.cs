@@ -2,7 +2,7 @@
 using System.Globalization;
 
 
-//Leitrura de arquivo txt 
+//Leitrura de arquivo txt !
 try
 {
   string[] linhas = File.ReadAllLines("Arquivos/_arquivoLeitura.txt");
