@@ -2,28 +2,42 @@
 using System.Globalization;
 
 
+new ExemploExcecao().Metodo1();
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Leitrura de arquivo txt !
-try
-{
-  string[] linhas = File.ReadAllLines("Arquivos/_arquivoLeitura.txt");
+// try
+// {
+//   string[] linhas = File.ReadAllLines("Arquivos/_arquivoLeitura.txt");
 
 
-  foreach (string linha in linhas)
-  {
-    Console.WriteLine(linha);
-  }
+//   foreach (string linha in linhas)
+//   {
+//     Console.WriteLine(linha);
+//   }
 
-}
+// }
 
-catch (FileNotFoundException ex)
-{
-  Console.WriteLine($"Ocorreu um erro na leitura do arquivo . Arquivo nã oencontrado. {ex.Message}");
-}
-catch (Exception ex)
-{
-  Console.Clear();
-  Console.WriteLine($"Ocorreu uma exceção genérica. \n\n{ex.Message}");
-}
+// catch (FileNotFoundException ex)
+// {
+//   Console.WriteLine($"Ocorreu um erro na leitura do arquivo . Arquivo nã oencontrado. {ex.Message}");
+// }
+// catch (Exception ex)
+// {
+//   Console.Clear();
+//   Console.WriteLine($"Ocorreu uma exceção genérica. \n\n{ex.Message}");
+// }
 
 
 
