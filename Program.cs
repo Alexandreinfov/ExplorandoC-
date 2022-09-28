@@ -5,7 +5,7 @@ using System.Globalization;
 //Leitrura de arquivo txt 
 try
 {
-  string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
+  string[] linhas = File.ReadAllLines("Arquivos/_arquivoLeitura.txt");
 
 
   foreach (string linha in linhas)
@@ -13,6 +13,11 @@ try
     Console.WriteLine(linha);
   }
 
+}
+
+catch (FileNotFoundException ex)
+{
+  Console.WriteLine($"Ocorreu um erro na leitura do arquivo . Arquivo nã oencontrado. {ex.Message}");
 }
 catch (Exception ex)
 {
