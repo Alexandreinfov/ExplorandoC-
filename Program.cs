@@ -1,8 +1,85 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
+using Newtonsoft.Json;
 
 
-new ExemploExcecao().Metodo1();
+string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+
+List<Vendas1> listaVenda = JsonConvert.DeserializeObject<List<Vendas1>>(conteudoArquivo);
+
+foreach (Vendas1 venda in listaVenda)
+{
+  Console.WriteLine($"Id: {venda.Id}, Produto : {venda.Produto}" +
+        $"Preço: {venda.Produto} " +
+        $"Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+}
+
+
+
+
+
+
+// DateTime dataAtual = DateTime.Now;
+
+// List<Vendas> listaVendas = new List<Vendas>();
+
+// Vendas v1 = new Vendas(1, "Material de escritório", 25.00M, dataAtual);
+// Vendas v2 = new Vendas(2, "Licença de Software ", 110.00M, dataAtual);
+
+// listaVendas.Add(v1);
+// listaVendas.Add(v2);
+
+// string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
+
+// File.WriteAllText("Arquivos/vendas.json", serializado);
+// Console.WriteLine(serializado);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+
+// var (sucesso, linhasArquivo, quantidadeLinhas) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+
+// if (sucesso)
+// {
+//   Console.WriteLine("Quantidade linhas do arquivo:" + quantidadeLinhas);
+//   foreach (string linha in linhasArquivo)
+//   {
+//     Console.WriteLine(linha);
+//   }
+// }
+// else
+// {
+//   Console.WriteLine("Não foi possível ler o arquivo");
+// }
+
+// (int, string, string) tupla = (1, "Leonardo", "Buta");
+
+// Console.WriteLine(tupla.Item3);
+
+
+
+
+
+
+
+
+
+
+
+// new ExemploExcecao().Metodo1();
 
 
 
